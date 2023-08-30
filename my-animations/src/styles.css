@@ -1,9 +1,9 @@
 :root{
-    --background:black;
-    --big-card-1:orange;
-    --big-card-2:pink;
-    --big-card-3:yellow;
-    --big-card-4:purple;
+    --background:rgb(29, 6, 36);
+    --big-card-1:white;
+    --big-card-2:red;
+    --big-card-3:blue;
+    --big-card-4:green;
     --small-card-1:orange;
     --small-card-2:pink;
     --small-card-3:purple;

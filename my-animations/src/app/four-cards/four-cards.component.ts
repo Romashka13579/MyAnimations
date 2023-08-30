@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CARDS } from '../four-cards-list';
+import { BIGCARDS, SMALLCARDS } from '../four-cards-list';
 
 @Component({
   selector: 'app-four-cards',
@@ -7,5 +7,6 @@ import { CARDS } from '../four-cards-list';
   styleUrls: ['./four-cards.component.css']
 })
 export class FourCardsComponent {
-    cards = CARDS;
+    bigCards = BIGCARDS;
+    smallCards = SMALLCARDS;
 }

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --background:black;
+    --big-card-1:orange;
+    --big-card-2:pink;
+    --big-card-3:yellow;
+    --big-card-4:purple;
+    --small-card-1:orange;
+    --small-card-2:pink;
+    --small-card-3:purple;
+    --small-card-4:yellow;
+    --button:brown;
+    --button-focused:rgb(58, 16, 16);
+}

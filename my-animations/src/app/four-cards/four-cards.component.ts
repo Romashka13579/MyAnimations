@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CARDS } from '../four-cards-list';
 
 @Component({
   selector: 'app-four-cards',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./four-cards.component.css']
 })
 export class FourCardsComponent {
-
+    cards = CARDS;
 }

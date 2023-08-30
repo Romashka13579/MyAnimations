@@ -1,1 +1,42 @@
-<p>four-cards works!</p>
+<div class="the-animations">
+    <div class="four-cards-block">
+        <div class="four-cards" data-status = "after" data-index = "0">
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+        </div>
+        <div class="four-cards" data-status = "active" data-index = "1">
+            <div class="big-card card">{{cards[0].band}}</div>
+            <div class="small-card card"><img [src]="cards[0].image"></div>
+            <div class="big-card card">{{cards[1].band}}</div>
+            <div class="small-card card"><img [src]="cards[1].image"></div>
+            <div class="big-card card">{{cards[2].band}}</div>
+            <div class="small-card card"><img [src]="cards[2].image"></div>
+            <div class="small-card card"><img [src]="cards[3].image"></div>
+            <div class="big-card card"></div>
+        </div>
+        <div class="four-cards" data-status = "before" data-index = "2">
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+            <div class="small-card card"></div>
+            <div class="small-card card"></div>
+            <div class="big-card card"></div>
+        </div>
+        <div class="buttons">
+            <div class="button">
+                <button class="back fa-solid fa-arrow-right"></button>
+            </div>
+            <div class="button">
+                <button class="next fa-solid fa-arrow-right"></button>
+            </div>
+        </div>
+    </div>
+</div>

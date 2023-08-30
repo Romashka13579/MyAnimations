@@ -106,19 +106,11 @@ img{
 }
 
 button{
-    font-weight: 600;
-    font-size: 30px;
-    color: white;
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 0px 2px;
     transition: all 0.5s ease;
-}
-
-.button:nth-child(1){
-    transform: rotate(180deg);
 }
 
 .four-cards[data-status="pre-before"]{
@@ -153,16 +145,17 @@ button{
     scale: 1;
 }
 
-button{
-    width: 20px;
-    height: 20px;
-    background: wheat;
+button fa-icon{
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    transition: all 0.5s ease;
 }
 
-button:hover{
+button:hover > fa-icon{
     color: var(--button);
 }
 
-button:focus{
+button:focus > fa-icon{
     color: var(--button-focused);
 }

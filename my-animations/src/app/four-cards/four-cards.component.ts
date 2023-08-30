@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BIGCARDS, SMALLCARDS } from '../four-cards-list';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-four-cards',
@@ -7,6 +9,8 @@ import { BIGCARDS, SMALLCARDS } from '../four-cards-list';
   styleUrls: ['./four-cards.component.css']
 })
 export class FourCardsComponent implements OnInit {
+  faArrowR = faArrowRight;
+  faArrowL = faArrowLeft;
   bigCards = BIGCARDS;
   smallCards = SMALLCARDS;
 

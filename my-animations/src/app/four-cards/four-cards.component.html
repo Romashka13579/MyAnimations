@@ -1,14 +1,14 @@
 <div class="the-animations">
     <div class="four-cards-block">
         <div class="four-cards" data-status="after" data-index="0">
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
+            <div class="big-card card"><img [src]="bigCards[7].image"></div>
+            <div class="small-card card"><img [src]="smallCards[7].image"></div>
+            <div class="big-card card"><img [src]="bigCards[5].image"></div>
+            <div class="small-card card"><img [src]="smallCards[5].image"></div>
+            <div class="big-card card"><img [src]="bigCards[6].image"></div>
+            <div class="small-card card"><img [src]="smallCards[6].image"></div>
+            <div class="small-card card"><img [src]="smallCards[4].image"></div>
+            <div class="big-card card"><img [src]="bigCards[4].image"></div>
         </div>
         <div class="four-cards" data-status="active" data-index="1">
             <div class="big-card card"><img [src]="bigCards[0].image"></div>
@@ -21,21 +21,21 @@
             <div class="big-card card"><img [src]="bigCards[3].image"></div>
         </div>
         <div class="four-cards" data-status="before" data-index="2">
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
-            <div class="small-card card"></div>
-            <div class="small-card card"></div>
-            <div class="big-card card"></div>
+            <div class="big-card card"><img [src]="bigCards[8].image"></div>
+            <div class="small-card card"><img [src]="smallCards[8].image"></div>
+            <div class="big-card card"><img [src]="bigCards[9].image"></div>
+            <div class="small-card card"><img [src]="smallCards[9].image"></div>
+            <div class="big-card card"><img [src]="bigCards[10].image"></div>
+            <div class="small-card card"><img [src]="smallCards[10].image"></div>
+            <div class="small-card card"><img [src]="smallCards[11].image"></div>
+            <div class="big-card card"><img [src]="bigCards[11].image"></div>
         </div>
         <div class="buttons">
             <div class="button">
-                <button class="back fa-solid fa-arrow-right"></button>
+                <button class="back"><fa-icon [icon] = "faArrowL"></fa-icon></button>
             </div>
             <div class="button">
-                <button class="next fa-solid fa-arrow-right"></button>
+                <button class="next fa-solid fa-arrow-right"><fa-icon [icon] = "faArrowR"></fa-icon></button>
             </div>
         </div>
     </div>

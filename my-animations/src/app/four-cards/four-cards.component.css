@@ -153,6 +153,12 @@ button{
     scale: 1;
 }
 
+button{
+    width: 20px;
+    height: 20px;
+    background: wheat;
+}
+
 button:hover{
     color: var(--button);
 }

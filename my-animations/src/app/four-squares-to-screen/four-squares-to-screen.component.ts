@@ -11,7 +11,10 @@ export class FourSquaresToScreenComponent implements OnInit {
 
     squares.forEach(square => {
       (square as HTMLInputElement).addEventListener('click', () => {
-        (square as HTMLInputElement).dataset.status = "opened";
+      
+        (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? "closed" : "opened";
+        console.log((square as HTMLInputElement).dataset.status);
+        
       });
     });
   }

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FourSquaresToScreenComponent implements OnInit {
   ngOnInit(): void {
     var squares = document.querySelectorAll('.square');
+    var covers = document.querySelectorAll('.square-card-cover');
 
     squares.forEach(square => {
       (square as HTMLInputElement).addEventListener('click', () => {
@@ -15,6 +16,11 @@ export class FourSquaresToScreenComponent implements OnInit {
         (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? "closed" : "opened";
         console.log((square as HTMLInputElement).dataset.status);
         
+      });
+    });
+    covers.forEach(cover => {
+      cover.addEventListener('transitionend', () => {
+        (cover as HTMLInputElement).dataset.status = "uncovered";
       });
     });
   }

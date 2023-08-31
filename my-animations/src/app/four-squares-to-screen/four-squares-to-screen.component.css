@@ -22,16 +22,20 @@
 }
 
 .square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     border-radius: 25px;
     opacity: 0.9;
     transition: all 0.8s ease;
+    overflow: hidden;
 }
 
-.square:nth-child(1){transform: translate(-22px, -2px) rotate(-22deg); background: blue;}
-.square:nth-child(2){transform: translate(-10px, -10px) rotate(-7deg); background: white;}
-.square:nth-child(3){transform: translate(10px, -2px) rotate(8deg); background: green;}
-.square:nth-child(4){transform: translate(30px) rotate(24deg); background: yellow;}
+.square:nth-child(1){transform: translate(-22px, -2px) rotate(-22deg);}
+.square:nth-child(2){transform: translate(-10px, -10px) rotate(-7deg);}
+.square:nth-child(3){transform: translate(10px, -2px) rotate(8deg);}
+.square:nth-child(4){transform: translate(30px) rotate(24deg);}
 
 .four-squares-over:hover .square:nth-child(1){transform: translate(-120px,-7px) rotate(-42deg);}
 .four-squares-over:hover .square:nth-child(2){transform: translate(-47px, -24px) rotate(-18deg);}
@@ -47,8 +51,8 @@
 
 .square[data-status="opened"]{
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
     transform: none;
 }
 .four-squares-over:hover .square[data-status="opened"]{
@@ -58,4 +62,43 @@
 .four-squares-over:has(.square[data-status="opened"]) > .square[data-status="closed"]{
     scale: 0;
     opacity: 0;
+}
+
+.square:nth-child(1) .square-card-cover{background: brown;}
+.square:nth-child(2) .square-card-cover{background: orange;}
+.square:nth-child(3) .square-card-cover{background: aqua;}
+.square:nth-child(4) .square-card-cover{background: pink;}
+.square:nth-child(1) .square-card{background: blue;}
+.square:nth-child(2) .square-card{background: white;}
+.square:nth-child(3) .square-card{background: green;}
+.square:nth-child(4) .square-card{background: yellow;}
+
+.square-card{
+    width: 90vw;
+    height: 90vh;
+}
+
+.square-card-cover{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.square[data-status="opened"] .square-card-cover{
+    opacity: 0;
+}
+
+.square-card-cover[data-status="uncovered"]{
+    display: none;
+}
+
+.square-card-cover[data-status="covered"]{
+    display: block;
+}
+
+div {
+    font-size: 200px;
 }

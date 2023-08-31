@@ -102,3 +102,14 @@
 div {
     font-size: 200px;
 }
+
+.top-button{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    border-bottom-right-radius: 30px;
+}

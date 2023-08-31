@@ -27,11 +27,18 @@
     height: 250px;
     background: white;
     border-radius: 25px;
+    opacity: 0.9;
+    transition: all 0.8s ease;
 }
 
-.square:nth-child(1){transform: translate(-105px, 14px) rotate(-32deg); background: blue;}
-.square:nth-child(2){transform: translate(-30px, -3px) rotate(-9deg); background: white;}
-.square:nth-child(3){transform: translate(28px, 2px) rotate(12deg); background: green;}
-.square:nth-child(4){transform: translate(110px, 12px) rotate(28deg); background: yellow;}
+.square:nth-child(1){transform: translate(-22px, -2px) rotate(-22deg); background: blue;}
+.square:nth-child(2){transform: translate(-10px, -10px) rotate(-7deg); background: white;}
+.square:nth-child(3){transform: translate(10px, -2px) rotate(8deg); background: green;}
+.square:nth-child(4){transform: translate(30px) rotate(24deg); background: yellow;}
 
-.square:nth-child(1):hover{}
+.four-squares-over:hover .square:nth-child(1){transform: translate(-120px,-7px) rotate(-42deg);}
+.four-squares-over:hover .square:nth-child(2){transform: translate(-47px, -24px) rotate(-18deg);}
+.four-squares-over:hover .square:nth-child(3){transform: translate(40px, -10px) rotate(12deg);}
+.four-squares-over:hover .square:nth-child(4){transform: translate(120px, 5px) rotate(32deg);}
+
+.square:hover{scale: 1.15;}

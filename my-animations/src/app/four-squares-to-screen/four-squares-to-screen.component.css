@@ -1,0 +1,37 @@
+.the-animations{
+    display: flex;
+    background: var(--background);
+}
+
+.four-squares-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+}
+
+.four-squares-over{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.2s ease;
+}
+
+.square{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 25px;
+}
+
+.square:nth-child(1){transform: translate(-105px, 14px) rotate(-32deg); background: blue;}
+.square:nth-child(2){transform: translate(-30px, -3px) rotate(-9deg); background: white;}
+.square:nth-child(3){transform: translate(28px, 2px) rotate(12deg); background: green;}
+.square:nth-child(4){transform: translate(110px, 12px) rotate(28deg); background: yellow;}
+
+.square:nth-child(1):hover{}

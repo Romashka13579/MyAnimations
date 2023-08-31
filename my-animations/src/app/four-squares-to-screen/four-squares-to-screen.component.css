@@ -23,8 +23,6 @@
 
 .square{
     position: absolute;
-    width: 250px;
-    height: 250px;
     background: white;
     border-radius: 25px;
     opacity: 0.9;
@@ -42,3 +40,21 @@
 .four-squares-over:hover .square:nth-child(4){transform: translate(120px, 5px) rotate(32deg);}
 
 .square:hover{scale: 1.15;}
+
+.square[data-status="closed"]{
+    width: 250px;
+    height: 250px;
+}
+
+.square[data-status="opened"]{
+    width: 100vw;
+    height: 100vh;
+    transform: none;
+}
+.four-squares-over:hover .square[data-status="opened"]{
+    transform: none;
+}
+
+.four-squares-over:has(.square[data-status="opened"]) > .square[data-status="closed"]{
+    opacity: 0;
+}

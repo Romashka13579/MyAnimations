@@ -54,6 +54,7 @@
     width: 90vw;
     height: 90vh;
     transform: none;
+    border: 5px solid #212229;
 }
 .four-squares-over:hover .square[data-status="opened"]{
     transform: none;
@@ -64,18 +65,15 @@
     opacity: 0;
 }
 
-.square:nth-child(1) .square-card-cover{background: brown;}
-.square:nth-child(2) .square-card-cover{background: orange;}
-.square:nth-child(3) .square-card-cover{background: aqua;}
-.square:nth-child(4) .square-card-cover{background: pink;}
-.square:nth-child(1) .square-card{background: blue;}
-.square:nth-child(2) .square-card{background: white;}
-.square:nth-child(3) .square-card{background: green;}
-.square:nth-child(4) .square-card{background: yellow;}
+.square:nth-child(1) .square-card-cover{background: blue;}
+.square:nth-child(2) .square-card-cover{background: white;}
+.square:nth-child(3) .square-card-cover{background: green;}
+.square:nth-child(4) .square-card-cover{background: yellow;}
 
 .square-card{
     width: 90vw;
     height: 90vh;
+    background: rgb(236, 241, 249);
 }
 
 .square-card-cover{
@@ -89,6 +87,7 @@
 
 .square[data-status="opened"] .square-card-cover{
     opacity: 0;
+    scale: 0;
 }
 
 .square[data-status="closed"] .square-card-cover{

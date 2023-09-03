@@ -91,12 +91,11 @@
     opacity: 0;
 }
 
-.square-card-cover[data-status="uncovered"]{
-    display: none;
-}
+.square[data-status="closed"] .square-card-cover{
+    opacity: 1;
+    scale: 1;
+    transition: scale 50ms, opacity 0.5s;
 
-.square-card-cover[data-status="covered"]{
-    display: block;
 }
 
 div {

@@ -14,7 +14,19 @@ export class FourSquaresToScreenComponent implements OnInit {
       (square as HTMLInputElement).addEventListener('click', () => {
         var cover = square.querySelector('.square-card-cover');
         (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? "closed" : "opened";
-        (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? (cover as HTMLInputElement).dataset.status = "covered" : (cover as HTMLInputElement).dataset.status = "uncovered";
+        (cover as HTMLInputElement).addEventListener('transitionend', () => {
+          if ((cover as HTMLInputElement).dataset.status == "uncovered") {
+            (cover as HTMLInputElement).style.scale = "0";
+          }
+        });
+        // if ((square as HTMLInputElement).dataset.status == "opened") {
+        // (cover as HTMLInputElement).addEventListener('transitionend', () => {
+        //   (cover as HTMLInputElement).dataset.status = "uncovered";
+        // });
+        // }
+        // else { 
+        //   (cover as HTMLInputElement).dataset.status = "covered";
+        // }
         // covers.forEach(cover => {
         //   cover.addEventListener('transitionend', () => {
         //     (cover as HTMLInputElement).dataset.status = "uncovered";

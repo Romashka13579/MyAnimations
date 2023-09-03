@@ -9,27 +9,17 @@ export class FourSquaresToScreenComponent implements OnInit {
   ngOnInit(): void {
     var squares = document.querySelectorAll('.square');
     var covers = document.querySelectorAll('.square-card-cover');
-    var topButtons = document.querySelectorAll('.top-button');
 
     squares.forEach(square => {
       (square as HTMLInputElement).addEventListener('click', () => {
-      
-        (square as HTMLInputElement).dataset.status = "opened";
-        console.log((square as HTMLInputElement).dataset.status);
-        
-      });
-    });
-    covers.forEach(cover => {
-      cover.addEventListener('transitionend', () => {
-        (cover as HTMLInputElement).dataset.status = "uncovered";
-      });
-    });
-    topButtons.forEach(topButton => {
-      (topButton as HTMLInputElement).addEventListener('click', () => {
-      
-        (topButton as HTMLInputElement).dataset.status = "closed";
-        console.log((topButton as HTMLInputElement).dataset.status);
-        
+        var cover = square.querySelector('.square-card-cover');
+        (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? "closed" : "opened";
+        (square as HTMLInputElement).dataset.status = (square as HTMLInputElement).dataset.status == "opened" ? (cover as HTMLInputElement).dataset.status = "covered" : (cover as HTMLInputElement).dataset.status = "uncovered";
+        // covers.forEach(cover => {
+        //   cover.addEventListener('transitionend', () => {
+        //     (cover as HTMLInputElement).dataset.status = "uncovered";
+        //   });
+        // });
       });
     });
   }
